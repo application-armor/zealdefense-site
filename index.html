@@ -192,6 +192,53 @@
   footer { position: relative; z-index: 1; text-align: center; padding: 40px 60px; border-top: 1px solid rgba(0,245,255,0.08); font-size: 13px; color: rgba(200,224,240,0.35); letter-spacing: 1px; }
   footer a { color: rgba(0,245,255,0.5); text-decoration: none; }
 
+  /* ADVISORS */
+  .advisor-card { display: grid; grid-template-columns: 280px 1fr; gap: 50px; background: rgba(7,20,40,0.8); border: 1px solid rgba(0,245,255,0.12); padding: 50px; clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px)); position: relative; margin-top: 60px; }
+  .advisor-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--cyan), var(--pink)); }
+  .advisor-photo { position: relative; }
+  .advisor-photo img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border: 1px solid rgba(0,245,255,0.3); clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px)); display: block; }
+  .advisor-photo::after { content: ''; position: absolute; inset: -6px; background: linear-gradient(135deg, rgba(0,245,255,0.25), rgba(255,45,120,0.18)); z-index: -1; clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px)); filter: blur(12px); opacity: 0.6; }
+  .advisor-role { display: inline-block; font-family: 'Orbitron', monospace; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--cyan); border: 1px solid rgba(0,245,255,0.3); padding: 5px 14px; margin-bottom: 16px; clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%); background: rgba(0,245,255,0.05); font-weight: 700; }
+  .advisor-name { font-family: 'Orbitron', monospace; font-size: 28px; font-weight: 800; color: var(--white); margin-bottom: 18px; letter-spacing: 1px; line-height: 1.2; }
+  .advisor-titles { font-size: 15px; color: rgba(200,224,240,0.75); margin-bottom: 26px; line-height: 1.6; }
+  .advisor-titles div { padding-left: 14px; border-left: 2px solid rgba(0,245,255,0.3); margin-bottom: 8px; }
+  .advisor-bio { font-size: 16px; color: rgba(200,224,240,0.7); margin-bottom: 36px; line-height: 1.75; }
+  .advisor-highlights { display: flex; flex-direction: column; gap: 26px; }
+  .highlight-label { font-family: 'Orbitron', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--pink); margin-bottom: 12px; font-weight: 700; }
+  .highlight-items { display: flex; flex-wrap: wrap; gap: 8px; }
+  .highlight-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .highlight-stats > div { background: rgba(0,245,255,0.04); border: 1px solid rgba(0,245,255,0.12); padding: 16px 12px; clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px)); text-align: center; }
+  .highlight-stats strong { display: block; font-family: 'Orbitron', monospace; font-size: 22px; font-weight: 900; background: linear-gradient(135deg, var(--cyan), var(--pink)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; }
+  .highlight-stats span { display: block; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(200,224,240,0.55); margin-top: 8px; }
+
+  /* RESEARCH */
+  .research-card { background: rgba(7,20,40,0.8); border: 1px solid rgba(0,245,255,0.12); padding: 50px; margin-top: 60px; position: relative; clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px)); }
+  .research-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--cyan), var(--pink)); }
+  .research-status { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--cyan); font-weight: 700; margin-bottom: 22px; }
+  .status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 12px var(--cyan); animation: pulseDot 1.8s ease-in-out infinite; }
+  @keyframes pulseDot { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.8); } }
+  .research-title { font-family: 'Orbitron', monospace; font-size: 24px; font-weight: 700; color: var(--white); margin-bottom: 22px; line-height: 1.3; letter-spacing: 0.5px; }
+  .research-body { font-size: 16px; color: rgba(200,224,240,0.7); line-height: 1.75; margin-bottom: 26px; }
+  .research-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 26px; }
+  .research-credit { font-size: 13px; color: rgba(200,224,240,0.5); font-style: italic; padding-top: 18px; border-top: 1px solid rgba(0,245,255,0.08); }
+
+  /* TRAINING */
+  .training-card { background: rgba(7,20,40,0.8); border: 1px solid rgba(255,45,120,0.15); padding: 50px; margin-top: 60px; position: relative; clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px)); }
+  .training-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--pink), var(--cyan)); }
+  .training-header { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 26px; }
+  .event-badge { font-family: 'Orbitron', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--cyan); border: 1px solid rgba(0,245,255,0.3); padding: 6px 14px; clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%); background: rgba(0,245,255,0.05); font-weight: 700; }
+  .event-badge.pink { color: var(--pink); border-color: rgba(255,45,120,0.3); background: rgba(255,45,120,0.05); }
+  .event-meta { font-size: 13px; color: rgba(200,224,240,0.6); letter-spacing: 1px; margin-left: auto; }
+  .training-title { font-family: 'Orbitron', monospace; font-size: 24px; font-weight: 700; color: var(--white); margin-bottom: 20px; line-height: 1.3; letter-spacing: 0.5px; }
+  .training-body { font-size: 16px; color: rgba(200,224,240,0.7); line-height: 1.75; margin-bottom: 32px; }
+  .training-modules { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 30px; }
+  .module { background: rgba(0,245,255,0.03); border: 1px solid rgba(0,245,255,0.1); padding: 26px 22px; clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px)); transition: all 0.3s; }
+  .module:hover { border-color: rgba(0,245,255,0.3); background: rgba(0,245,255,0.05); transform: translateY(-3px); }
+  .module-num { font-family: 'Orbitron', monospace; font-size: 28px; font-weight: 900; background: linear-gradient(135deg, var(--cyan), var(--pink)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 14px; }
+  .module-info h4 { font-family: 'Orbitron', monospace; font-size: 13px; color: var(--white); margin-bottom: 10px; letter-spacing: 1px; }
+  .module-info p { font-size: 14px; color: rgba(200,224,240,0.65); line-height: 1.6; }
+  .training-tools { display: flex; flex-wrap: wrap; gap: 8px; }
+
   @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
   .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -214,6 +261,13 @@
     .clients-grid { grid-template-columns: 1fr; max-width: 360px; margin-left: auto; margin-right: auto; }
     .ai-banner-inner { grid-template-columns: 1fr; gap: 40px; }
     .ai-banner { padding: 50px 24px; }
+    .advisor-card { grid-template-columns: 1fr; gap: 30px; padding: 32px; }
+    .advisor-photo img { max-width: 240px; margin: 0 auto; }
+    .highlight-stats { grid-template-columns: repeat(2, 1fr); }
+    .research-card, .training-card { padding: 32px; }
+    .training-modules { grid-template-columns: 1fr; }
+    .training-header { flex-direction: column; align-items: flex-start; }
+    .event-meta { margin-left: 0; }
   }
 </style>
 </head>
@@ -226,6 +280,9 @@
     <li><a href="#services">Services</a></li>
     <li><a href="#methodology">Methodology</a></li>
     <li><a href="#compliance">Compliance</a></li>
+    <li><a href="#advisors">Advisors</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#training">Training</a></li>
     <li><a href="#clients">Clients</a></li>
     <li><a href="#contact" class="nav-cta">Get Assessment</a></li>
   </ul>
@@ -387,6 +444,143 @@
         <div class="roi-item"><div class="roi-dot"></div><span>Security invisible to engineering — zero friction, maximum business velocity</span></div>
         <div class="roi-item"><div class="roi-dot"></div><span>Stronger competitive advantage through compliance certification including AI governance</span></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADVISORS & BOARD -->
+<section id="advisors">
+  <div class="reveal">
+    <div class="section-label">// Advisors &amp; Board</div>
+    <h2>Strategic <span class="accent">Leadership</span></h2>
+    <p class="section-desc">Guided by world-class researchers and security pioneers whose work shapes the foundations of modern computing.</p>
+  </div>
+  <div class="advisor-card reveal">
+    <div class="advisor-photo">
+      <img src="assets/iyengar.jpg" alt="Dr. Sitharama S. Iyengar">
+    </div>
+    <div class="advisor-content">
+      <div class="advisor-role">Advisor &amp; Board Member</div>
+      <h3 class="advisor-name">Dr. Sitharama S. Iyengar</h3>
+      <div class="advisor-titles">
+        <div>Distinguished University Professor, Florida International University</div>
+        <div>Founding Director, Discovery Lab &nbsp;•&nbsp; Director, US Army-funded Center of Excellence in Digital Forensics</div>
+        <div>Distinguished Chaired Professor, National Forensics Sciences University, Gandhinagar, India</div>
+      </div>
+      <p class="advisor-bio">
+        Dr. Iyengar is a globally recognized computer scientist and co-inventor of the <strong>Brooks&ndash;Iyengar Algorithm</strong> for Byzantine-fault-tolerant distributed sensing &mdash; a foundational result whose impact spans modern sensor fusion, distributed control, and cyber-physical systems. With 600+ research papers, 32 books, 65+ PhDs supervised, and over $65M in research funding from NSF, DARPA, ONR, NASA, and the US Army, his guidance anchors ZealDefense&rsquo;s research direction in rigor and originality.
+      </p>
+      <div class="advisor-highlights">
+        <div>
+          <div class="highlight-label">Fellowships &amp; Academies</div>
+          <div class="highlight-items">
+            <span class="tag">IEEE Life Fellow</span>
+            <span class="tag">ACM Fellow</span>
+            <span class="tag">AAAS Fellow</span>
+            <span class="tag">NAI Fellow</span>
+            <span class="tag">AIMBE Fellow</span>
+            <span class="tag">European Academy of Sciences</span>
+          </div>
+        </div>
+        <div>
+          <div class="highlight-label">Headline Recognition</div>
+          <div class="highlight-items">
+            <span class="tag">2019 IEEE Test of Time Award</span>
+            <span class="tag">2023 Karnataka Rajyotsava Award</span>
+            <span class="tag">INTERPOL Lifetime Achievement</span>
+            <span class="tag">Fulbright Distinguished Scientist</span>
+            <span class="tag">Mahatma Gandhi Pravasi Medal &mdash; House of Lords (2013)</span>
+          </div>
+        </div>
+        <div>
+          <div class="highlight-label">Research Footprint</div>
+          <div class="highlight-stats">
+            <div><strong>600+</strong><span>Research Papers</span></div>
+            <div><strong>32</strong><span>Books</span></div>
+            <div><strong>65+</strong><span>PhDs Supervised</span></div>
+            <div><strong>$65M+</strong><span>Research Funding</span></div>
+            <div><strong>67</strong><span>h-index</span></div>
+            <div><strong>Top 2%</strong><span>Cited Scholars</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research">
+  <div class="reveal">
+    <div class="section-label">// Research</div>
+    <h2>Brooks&ndash;Iyengar on <span class="accent">Kubernetes</span></h2>
+    <p class="section-desc">Active research bringing Byzantine-fault-tolerant consensus to container orchestration.</p>
+  </div>
+  <div class="research-card reveal">
+    <div class="research-status"><span class="status-dot"></span> Active Research &nbsp;•&nbsp; Paper in Progress</div>
+    <h3 class="research-title">Byzantine-Fault-Tolerant Consensus across Nodes &amp; Pods</h3>
+    <p class="research-body">
+      ZealDefense is implementing the Brooks&ndash;Iyengar algorithm inside Kubernetes to deliver Byzantine-fault-tolerant consensus across nodes and pods. The work targets cluster scenarios where individual components may behave maliciously or non-deterministically, applying the algorithm&rsquo;s proven sensor-fusion approach to converge on trustworthy state under adversarial conditions &mdash; a foundation for resilient cloud-native security.
+    </p>
+    <div class="research-tags">
+      <span class="tag">Byzantine Fault Tolerance</span>
+      <span class="tag">Distributed Consensus</span>
+      <span class="tag">Kubernetes</span>
+      <span class="tag">Sensor Fusion</span>
+      <span class="tag">Cloud-Native Security</span>
+    </div>
+    <p class="research-credit">In collaboration with Dr. S. S. Iyengar &mdash; co-inventor of the Brooks&ndash;Iyengar algorithm.</p>
+  </div>
+</section>
+
+<!-- TRAINING -->
+<section id="training">
+  <div class="reveal">
+    <div class="section-label">// Training</div>
+    <h2>Hands-On Training at <span class="accent">Premier Conferences</span></h2>
+    <p class="section-desc">We train students and working professionals at the world&rsquo;s leading security conferences &mdash; turning theory into operational defense skills.</p>
+  </div>
+  <div class="training-card reveal">
+    <div class="training-header">
+      <span class="event-badge">DEF CON Cloud Village</span>
+      <span class="event-badge pink">AICS Bahrain</span>
+      <span class="event-meta">5&ndash;6 November 2025 &nbsp;•&nbsp; Exhibition World Bahrain &nbsp;•&nbsp; Room C16</span>
+    </div>
+    <h3 class="training-title">LAB &nbsp;|&nbsp; Kubernetes: Attack and Defense</h3>
+    <p class="training-body">
+      An interactive, hands-on lab where participants step into the roles of both attacker and defender to understand Kubernetes vulnerabilities, exploit misconfigurations, and implement robust security controls. Covers core secure-design principles and the OWASP Top 10 for Kubernetes &mdash; a comprehensive way to master container-orchestration security.
+    </p>
+    <div class="training-modules">
+      <div class="module">
+        <div class="module-num">01</div>
+        <div class="module-info">
+          <h4>Tools Installation</h4>
+          <p>Install and configure Falco, KubeArmor, Cilium, Kyverno, and Istio for threat detection, runtime enforcement, eBPF networking, policy management, and service-mesh security.</p>
+        </div>
+      </div>
+      <div class="module">
+        <div class="module-num">02</div>
+        <div class="module-info">
+          <h4>Secure Design Principles</h4>
+          <p>Hands-on labs on Least Privilege via RBAC, attack-surface minimization through Network Policies, Defense in Depth, and Zero Trust networks with mTLS.</p>
+        </div>
+      </div>
+      <div class="module">
+        <div class="module-num">03</div>
+        <div class="module-info">
+          <h4>Top 10 K8s Vulnerabilities</h4>
+          <p>Real-world misconfigurations and attack vectors &mdash; from RBAC mistakes to container escapes &mdash; exploited and fixed in guided exercises.</p>
+        </div>
+      </div>
+    </div>
+    <div class="training-tools">
+      <span class="tag">Falco</span>
+      <span class="tag">KubeArmor</span>
+      <span class="tag">Cilium</span>
+      <span class="tag">Kyverno</span>
+      <span class="tag">Istio</span>
+      <span class="tag">RBAC</span>
+      <span class="tag">mTLS</span>
+      <span class="tag">eBPF</span>
     </div>
   </div>
 </section>
